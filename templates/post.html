@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+
+<main>
+    <form action="/post/" align="center" method="POST">
+    {% csrf_token %}
+     <table class="login_table" id="contact_table">
+       <tr>
+          <th>
+              <a href="/" class="contactus"><i class="fa fa-arrow-left"></i>Back</a>
+          </th>
+       </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" placeholder="author" name="author" required>
+            </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>
+                Usn
+            </td>
+            <td>
+                <input type="text" name="usn" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input type="text" name="title" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Text
+            </td>
+            <td>
+                <input type="text" name="text" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="submit_contact" type="submit" value="Submit Contact">
+            </td>
+        </tr>
+    </table>
+    </form>
+</main>
+
+{% endblock %}

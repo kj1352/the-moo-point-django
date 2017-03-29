@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
+    'log',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -54,7 +56,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Add this to tell Django where to redirect after 
+# Add this to tell Django where to redirect after
 # successful login
 
 LOGIN_REDIRECT_URL = '/'
@@ -122,6 +124,18 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+ACCOUNT_ACTIVATION_DAYS = 7
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'elkilledkira@gmail.com'
+EMAIL_HOST_PASSWORD = 'kayjay52#@lp'
+DEFAULT_FROM_EMAIL = 'EL'
 
 
 # Static files (CSS, JavaScript, Images)
