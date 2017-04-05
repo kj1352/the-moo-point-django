@@ -29,7 +29,7 @@ STATICFILES_DIRS = [
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['infinite-peak-45326.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['infinite-peak-45326.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -149,7 +149,4 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
 
