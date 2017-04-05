@@ -29,7 +29,7 @@ STATICFILES_DIRS = [
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['infinite-peak-45326.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['jssise.herokuapp.com', 'localhost:8000']
 
 
 # Application definition
