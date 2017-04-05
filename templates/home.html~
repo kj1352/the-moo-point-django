@@ -2,11 +2,6 @@
 
 {% block content %}
 
-  <a href="/logout" style="float: right; margin-right: 30px;">
-    <h4>Logout</h4>
-  </a>
-
-
 <div class="container">
 <div class="row">
 
@@ -18,11 +13,16 @@
     <ul>
       <li> Enter A Topic To Which Your Article Is Related To. </li>
       <li> All The Articles Will Be Checked For Plagiarism & If Found Guilty The Article Won't Be Considered </li>
-      <li> You Cannot Save The Article Or Edit It Later Even If You Find Any Mistake in it!</li>
+      <li> You Cannot Edit the Article Once You POST it</li>
       <li> Last Date To Update Your Article Will Be After Two Weeks From Now!!! </li>
       <li> Try Not To Write Crap Stuffs Cause You ll Be Caught Easily!! </li>
-      <li> Later This Website Will Be Converted into a Social Media For ISE Students!! So Stay Tuned!! </li>
     </ul>
+
+<center>
+	<label>Topics</label> <br>
+	<i>data science, internet of things, Testing, Recaptcha, Social Engineering Toolkit,<br> Cyber security, Machine Learning / Artificial Intelligence ,Virtual Reality / Augmented Reality </i>
+</center>
+
   </div>
 
 </div>
@@ -54,14 +54,13 @@
           <label for="usr">Title Of Your Article</label>
           <input type="text" class="form-control" id="usr" placeholder="title" name="title" required>
         </div>
-	
 
         <div class="form-group">
           <label for="usr">Write Here!!!</label>
           <textarea class="form-control" rows="10" id="comment" name="text"></textarea>
         </div>
 
-        <input class="submit_contact" type="submit" value="Submit Article" style="font-family: monospace; color:aliceblue; border:0px solid; background-color: #2276D2; padding: 10px;">
+        <center><input class="submit_contact" type="submit" value="Submit Article" style="font-family: monospace; color:aliceblue; border:0px solid; background-color: #2276D2; padding: 10px;"></center>
 
     </form>
 </main>
