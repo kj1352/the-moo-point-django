@@ -34,7 +34,7 @@ def post(request):
 	topic = request.POST["topic"]
 	title = request.POST["title"]
 	text = request.POST["text"]
-	new_post = Post(name = name, usn = usn, topic = topic, title = title, text = text)
+	new_post = Post(name = name, usn = usn, topic = topic, title = title, text = text)\
 	new_post.save()
 	send_mail("Contact The Number", "Name:" + name + "," + "title:" + title + "," + "Text:" + text, "nikhilkj24@gmail.com", ["kj@webtrigon.com"])
 	return HttpResponseRedirect("/")
