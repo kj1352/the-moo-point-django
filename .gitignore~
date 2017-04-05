@@ -1,5 +1,12 @@
 ### Django ###
+
+
+
+
+
+
 venv
 *.pyc
+staticfiles
 .env
 
