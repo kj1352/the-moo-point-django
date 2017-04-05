@@ -131,11 +131,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandbox5cfc2a66e7014cac83392764a7c21c6f.mailgun.org'
+EMAIL_HOST_PASSWORD = '836f112a853ecc3590097a3d7c9d33fc'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'elkilledkira@gmail.com'
-EMAIL_HOST_PASSWORD = 'kayjay52#@lp'
-DEFAULT_FROM_EMAIL = 'EL'
 
 
 # Static files (CSS, JavaScript, Images)
