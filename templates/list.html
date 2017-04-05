@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <div style="padding: 10px;" class="jumbotron">
+            <h2 class="link">{{ post.title }}</h2>
+            <div class="hidden">
+                    <h6> {{ post.topic }} </h6>
+
+                    <p>
+                        {{ post.text | safe }}
+                    </p>
+                    -{{ post.name }} ({{ post.usn }})
+            </div>
+        </div>
+
+    {% endfor %}
+
+{%  endblock %}

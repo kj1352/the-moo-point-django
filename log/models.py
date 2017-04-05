@@ -11,15 +11,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class ContactUs(models.Model):
-    name = models.CharField(max_length=100)
-    title= models.CharField(max_length=10, blank=False)
-    text = tinymce_models.HTMLField()
-
-    def __str__(self):
-        return self.name
-
-    def __unicode__(self):
-        return self.name

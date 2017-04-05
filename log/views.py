@@ -2,8 +2,9 @@
 #log/views.py
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from log.models import ContactUs, Post
-from django.http import HttpResponseRedirect, HttpResponse
+from log.models import Post
+from django.http import HttpResponseRedirect
+from django.utils import timezone
 
 # Create your views here.
 # this login required decorator is to not allow to any
@@ -12,21 +13,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 def home(request):
 	return render(request,"home.html")
 
-
-def contactus(request):
-    from django.core.mail import send_mail
-    if request.POST:
-        name = request.POST["name"]
-        title = request.POST["title"]
-        text = request.POST["text"]
-        new_contact = ContactUs(name = name,title = title, text = text)
-        new_contact.save()
-        return HttpResponseRedirect("/")
-    return render(request,"home.html")
-
-
 def post(request):
-    from django.core.mail import send_mail
+
     if request.POST:
         name = request.POST["name"]
         usn = request.POST["usn"]
@@ -37,3 +25,7 @@ def post(request):
         new_post.save()
         return HttpResponseRedirect("/")
     return render(request,"home.html")
+
+def see(request):
+    posts = Post.objects.all()
+    return render(request, 'list.html', {'posts': posts})

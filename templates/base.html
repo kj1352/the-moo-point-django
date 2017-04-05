@@ -16,13 +16,26 @@
 
 	    <title>El Moo Punto</title>
 
+        <style>
+            .hidden{
+                display: none;
+            }
+
+            .link:hover{
+                cursor: pointer;
+            }
+            .padded{
+                padding-top: 10%;
+            }
+        </style>
+
 	    <!-- Core CSS - Include with every page -->
 	    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	</head>
 
 	<body>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default" style="position: fixed; width: 100%;">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -31,7 +44,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" ref="/">The Moo-Point</a>
+	      <a class="navbar-brand" href="/">The Moo-Point</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -41,14 +54,20 @@
 	  </div>
 	</nav>
 
+    <main class="padded">
 	            {% block content %}
 	            {% endblock %}
-
+    </main>
 	    <!-- Core Scripts - Include with every page -->
 	    <script src = "{% static 'js/jquery.min.js' %}"></script>
 
 	    <script src = "{% static 'js/bootstrap.min.js' %}"></script>
 	    {% block javascript %}
+            <script>
+            $('.jumbotron').click(function(){
+                $(this).children('.hidden').removeClass();
+            });
+            </script>
 	    {% endblock %}
 
 	</body>

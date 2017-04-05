@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from log.models import Post, ContactUs
+from log.models import Post
 
 admin.site.register(Post)
-admin.site.register(ContactUs)
 
 # Register your models here.
