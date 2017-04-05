@@ -21,7 +21,6 @@ def contactus(request):
         text = request.POST["text"]
         new_contact = ContactUs(name = name,title = title, text = text)
         new_contact.save()
-        send_mail("Contact The Number", "Name:" + name + "," + "title:" + title + "," + "Text:" + text, "nikhilkj24@gmail.com", ["kj@webtrigon.com"])
         return HttpResponseRedirect("/")
     return render(request,"home.html")
 
@@ -29,13 +28,12 @@ def contactus(request):
 def post(request):
     from django.core.mail import send_mail
     if request.POST:
-	name = request.POST["name"]
-	usn = request.POST["usn"]
-	topic = request.POST["topic"]
-	title = request.POST["title"]
-	text = request.POST["text"]
-	new_post = Post(name = name, usn = usn, topic = topic, title = title, text = text)
-	new_post.save()
-	send_mail("Contact The Number", "Name:" + name + "," + "title:" + title + "," + "Text:" + text, "nikhilkj24@gmail.com", ["kj@webtrigon.com"])
-	return HttpResponseRedirect("/")
+        name = request.POST["name"]
+        usn = request.POST["usn"]
+        topic = request.POST["topic"]
+        title = request.POST["title"]
+        text = request.POST["text"]
+        new_post = Post(name = name, usn = usn, topic = topic, title = title, text = text)
+        new_post.save()
+        return HttpResponseRedirect("/")
     return render(request,"home.html")
