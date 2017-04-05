@@ -20,7 +20,8 @@
 
 <center>
 	<label>Topics</label> <br>
-	<i>data science, internet of things, Testing, Recaptcha, Social Engineering Toolkit,<br> Cyber security, Machine Learning / Artificial Intelligence ,Virtual Reality / Augmented Reality </i>
+	<i>data science, internet of things, Testing, Recaptcha, Social Engineering Toolkit,<br> Cyber security, Machine Learning / Artificial Intelligence ,Virtual Reality / Augmented Reality </i> <br>
+<b>You Can Also Add Your Own Topic Too</b>
 </center>
 
   </div>
@@ -47,7 +48,17 @@
 	
 	<div class="form-group">
           <label for="usr">Topic</label>
-          <input type="text" class="form-control" id="usr" placeholder="TOPIC" name="topic" required>
+		<select name="topic">
+		  <option value="data-science">Data Science</option>
+		  <option value="iot">Internet Of Things</option>	
+		  <option value="testing">Testing</option>
+		  <option value="recaptcha">Recaptcha</option>
+		  <option value="cyber-security">Cyber Security</option>
+		  <option value="set">Social Engineering Toolkit</option>
+		  <option value="machine-learning">Machine Learning / Artificial Intelligence</option>
+		  <option value="vr">Virtual Reality / Augmented Reality </option>
+		  <option value="other">Other</option>
+		</select>
         </div>
 	
 	<div class="form-group">
@@ -60,10 +71,12 @@
           <textarea class="form-control" rows="10" id="comment" name="text"></textarea>
         </div>
 
-        <center><input class="submit_contact" type="submit" value="Submit Article" style="font-family: monospace; color:aliceblue; border:0px solid; background-color: #2276D2; padding: 10px;"></center>
+        <center><input onclick="document.getElementById('#sub').style.color='dimgrey';" id="sub"  class="submit_contact" type="submit" value="Submit Article" style="font-family: monospace; color:aliceblue; border:0px solid; background-color: #2276D2; padding: 10px;"></center>
 
     </form>
 </main>
+
+<center> <h5><a href="/logout"> Logout </a></h5></center>
 
 <center><h5>Copyright (c) 2017 Copyright Holder All Rights Reserved.</h5></center>
 

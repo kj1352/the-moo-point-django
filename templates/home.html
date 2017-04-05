@@ -20,7 +20,7 @@
 
 <center>
 	<label>Topics</label> <br>
-	<i>data science, internet of things, Testing, Recaptcha, Social Engineering Toolkit,<br> Cyber security, Machine Learning / Artificial Intelligence ,Virtual Reality / Augmented Reality </i>
+	<i>data science, internet of things, Testing, Recaptcha, Social Engineering Toolkit,<br> Cyber security, Machine Learning / Artificial Intelligence ,Virtual Reality / Augmented Reality </i> <br>
 <b>You Can Also Add Your Own Topic Too</b>
 </center>
 
@@ -48,7 +48,17 @@
 	
 	<div class="form-group">
           <label for="usr">Topic</label>
-          <input type="text" class="form-control" id="usr" placeholder="TOPIC" name="topic" required>
+		<select name="topic">
+		  <option value="data-science">Data Science</option>
+		  <option value="iot">Internet Of Things</option>	
+		  <option value="testing">Testing</option>
+		  <option value="recaptcha">Recaptcha</option>
+		  <option value="cyber-security">Cyber Security</option>
+		  <option value="set">Social Engineering Toolkit</option>
+		  <option value="machine-learning">Machine Learning / Artificial Intelligence</option>
+		  <option value="vr">Virtual Reality / Augmented Reality </option>
+		  <option value="other">Other</option>
+		</select>
         </div>
 	
 	<div class="form-group">
@@ -65,6 +75,8 @@
 
     </form>
 </main>
+
+<center> <h5><a href="/logout"> Logout </a></h5></center>
 
 <center><h5>Copyright (c) 2017 Copyright Holder All Rights Reserved.</h5></center>
 
